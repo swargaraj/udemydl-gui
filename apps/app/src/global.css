@@ -1,0 +1,72 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: "GeistVariable";
+    src: url("/fonts/geist-variable.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+    :root {
+        --background: 240 6% 10%;
+        --foreground: 240 4.8% 95.9%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 6% 18%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 5.9% 10%;
+        --muted-foreground: 240 4.4% 58%;
+        --accent: 240 6% 14%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 3.8% 46.1%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: "GeistVariable", sans-serif;
+        width: 100%;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+
+    ::-moz-selection {
+        @apply bg-muted-foreground/25;
+    }
+
+    ::selection {
+        @apply bg-muted-foreground/25;
+    }
+}
